@@ -11,11 +11,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class CaesarCipher extends Activity {
-EditText ed;
-    TextView tv,tv2,tv3;
-    Button b,b2;
+    EditText ed;
+    TextView tv, tv2, tv3;
+    Button b, b2;
     String message  =  "",cipher  =  "";
     public static final String alpha   =   "abcdefghijklmnopqrstuvwxyz";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,6 @@ EditText ed;
         tv3  =  (TextView)findViewById(R.id.textView2);
         b2  =  (Button)findViewById(R.id.button2);
         b.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -36,7 +36,6 @@ EditText ed;
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -50,6 +49,7 @@ EditText ed;
             }
         });
     }
+    
     public  void encryption(String plainText, int Key_shift)
     {
         plainText   =   plainText.toLowerCase();
@@ -64,6 +64,7 @@ EditText ed;
         cipher  =  cipherText;
        tv2.setText(cipherText);
     }
+    
     public  void decrypt(String cipherText, int shiftKey)
     {
         cipherText   =   cipherText.toLowerCase();
@@ -81,6 +82,7 @@ EditText ed;
         }
         tv3.setText(plain_text);
     }
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
