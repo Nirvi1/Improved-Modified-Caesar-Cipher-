@@ -30,7 +30,6 @@ public class CaesarCipher extends Activity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 message  =  ed.getText().toString();
                 encryption(message, 3);
             }
@@ -38,14 +37,13 @@ public class CaesarCipher extends Activity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 message  =  ed.getText().toString();
                 int len  =  message.length();
                 len  =  len%13;
                 if(tv2.getText().toString().equals(""))
                     Toast.makeText(getApplicationContext(), "nothing to decrypt", Toast.LENGTH_SHORT).show();
                 else
-                decrypt(cipher, len);
+                    decrypt(cipher, len);
             }
         });
     }
