@@ -50,14 +50,14 @@ public class CaesarCipher extends Activity {
         });
     }
     
-    public  void encryption(String plainText, int Key_shift)
+    public  void encryption(String plainText, int shiftKey)
     {
         plainText   =   plainText.toLowerCase();
         String cipherText   =   "";
         for (int i   =   0; i < plainText.length(); i++)
         {
             int alpha_position   =   alpha.indexOf(plainText.charAt(i));
-            int key_val   =   (Key_shift + alpha_position) % 26;
+            int key_val   =   (shiftKey + alpha_position) % 26;
             char replaceVal   =   alpha.charAt(key_val);
             cipherText +  =   replaceVal;
         }
