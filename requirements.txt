@@ -1,0 +1,21 @@
+Flask==1.1.1
+requests==2.16.0
+packaging==19.0
+
+# Documentation
+connexion[swagger-ui]==2.4.0
+
+# Version comparison module
+beautifulsoup4==4.8.0
+
+# Debugging
+pydevd==1.7.1
+
+# Version utils
+semantic-version==2.6.0
+multipledispatch==0.6.0
+
+pandas==1.1.4
+
+# prometheus client
+prometheus-client==0.9.0
